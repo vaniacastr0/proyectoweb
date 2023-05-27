@@ -24,7 +24,7 @@ return new class extends Migration
             $table->time('Hora');
             $table->text('Comentario');
 
-            //referenciar a equipos y partidos
+            //referenciar a propuestas y profesores
             $table->foreign('Propuesta_Id')->references('Id')->on('Propuestas');
             $table->foreign('Profesor_Rut')->references('Rut')->on('Profesores');
         });
