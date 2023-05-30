@@ -1,48 +1,61 @@
 @extends('templates.master')
 
 @section('contenido-principal')
-<div style="background: linear-gradient(to bottom, #4e4e4e 43%, #fdfdfd 100%);">
-    <div class="container">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<body style="background-color:rgb(247, 253, 255)">
+    <div class="container-fluid min-vh-100  d-flex flex-column justify-content-center">
         <div class="row">
-            <div class="col-12 col-lg-9 d-flex flex-column justify-content-center align-items-center">
-                <h1>Propuestas de Tesis</h1>
-            </div>
-            <div class="col-12 col-lg-3 bg-section">
-                <div class="m-3 p-3 rounded bg-white border">
-                    <img src="imagenes/logo.png" class="img-fluid">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="name">
-                        <div id="name" class="form-text">Ingrese su nombre completo</div>
+            <div class="col-12 col-lg-8 offset-lg-2">
+                <div class="row bg-white">
+                    <div class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-center"
+                        style="height: 25rem;">
+                        <div class="pb-2 bg-white">
+                            <img src="imagenes/logo.png" style="width: 16rem;">
+                        </div>
+                        <h3>Ingreso de propuestas</h3>
+                        <h6>Taller de Sistema de Información</h6>
                     </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password">
-                        <div id="name" class="form-text">Ingrese su contraseña</div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Ingresar</button>
-                </form>
-            </div>
-            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Para que sirve?</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio in ullam rem
-                            itaque laboriosam facilis nulla delectus vel, excepturi libero cupiditate expedita neque,
-                            ipsum
-                            voluptatum provident aperiam non dicta! Sapiente.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                    <div class="col-12 col-lg-8 py-4">
+                        <h4>Inicio de Sesión</h4>
+                        <small>Proporcione sus credenciales para ingresar al sistema</small>
+                        <div class="card">
+                            <div class="card-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Nombre de Usuario</label>
+                                        <input type="text" id="username" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Contraseña</label>
+                                        <input type="password" id="password" class="form-control">
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Estudiante</label>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Profesor</label>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Administrador</label>
+                                    </div>
+                                    <div class="mb-3 px-0 text-end d-flex align-items-last">
+                                        <a href="home.html" target="_blank" class="btn btn-primary d-flex flex-column justify-content-center">
+                                            <span class="material-symbols-outlined">favorite
+                                            </span>iniciar sesion 
+                                        </a>
+                                        
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</body>
 @endsection

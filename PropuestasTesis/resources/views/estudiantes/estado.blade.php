@@ -1,24 +1,19 @@
 @extends('templates.master')
 
 @section('contenido-principal')
-<body style="background: linear-gradient(to bottom, #ccd5b6, #b06f45, #86c769)">
+<body style="background-color: rgb(255, 255, 255);">
     <div class="container-fluid py-5">
         <h1 class="text-center mb-4 fw-bold">Estado de propuesta</h1>
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card">
-                    <div class="p-3 text-center">
-                        <img src="imagenes/megumi.jpg" class="card-img-top rounded-circle"/>
-                    </div>
                     <div class="card-body text-center">
                         <h5 class="card-title">Propuesta</h5>
                         <p class="card-text">Estado:</p>
-                        <a href="#" class="btn btn-primary">Ver comentarios</a>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="row p-3">
             <div class="col-md-6 offset-md-3">
                 <div class="card">
@@ -27,7 +22,7 @@
                         <p class="card-text">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
                             odit a eligendi ducimus sed neque ipsa praesentium qui
-                            cupiditate quod?
+                            cupiditate quod Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi quod corrupti dolorem possimus officiis, perferendis atque tenetur tempore deserunt. Error rerum aut, voluptates nam asperiores quidem nisi distinctio blanditiis?
                         </p>
                     </div>
                 </div>
