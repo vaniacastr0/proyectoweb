@@ -30,3 +30,6 @@ Route::get('/administradores/propuestas',[App\Http\Controllers\AdministradoresCo
 
 
 Route::get('/profesores',[App\Http\Controllers\ProfesoresController::class,'propuestas'])->name('profesores.propuestas');
+Route::get('/profesores/ver',[App\Http\Controllers\ProfesoresController::class,'ver'])->name('profesores.ver');
+Route::get('/profesores/create',[App\Http\Controllers\ProfesoresController::class,'create'])->name('profesores.create');
+Route::get('/profesores/delete',[App\Http\Controllers\ProfesoresController::class,'delete'])->name('profesores.delete');

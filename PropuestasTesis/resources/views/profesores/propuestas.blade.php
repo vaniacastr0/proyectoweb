@@ -1,10 +1,11 @@
 @extends('templates.master')
 
-@section('contenido-principal')
+@section('hojas-estilo')
 <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+@endsection
 
-<!--Encabezado-->
+@section('contenido-principal')
 
 <body style="background-color: rgb(255, 255, 255);">
     <div class="container">
@@ -18,8 +19,7 @@
                         </div>
                         <div class="card">
                             <div class="card-body">
-                                <table
-                                    class="table table-striped table-hover">
+                                <table class="table table-striped table-hover">
                                     <thead>
                                         <tr>
                                             <th>ESTUDIANTES
@@ -50,21 +50,9 @@
                                             <td>PROFESOR</td>
                                             <td>PROPUESTA</td>
                                             <td>
-                                                <button type="submit" class="btn btn-sm btn-primary">
-                                                    <span class="material-symbols-outlined">
-                                                        visibility
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-success">
-                                                    <span class="material-symbols-outlined">
-                                                        add
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-danger">
-                                                    <span class="material-symbols-outlined">
-                                                        delete
-                                                    </span>
-                                                </button>
+                                                <a href=" {{ route('profesores.ver') }}" class="btn btn-primary">
+                                                    <i class="material-symbols-outlined">edit</i>
+                                                </a>
                                             </td>
                                         </tr>
 
