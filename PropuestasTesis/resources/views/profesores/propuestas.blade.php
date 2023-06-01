@@ -15,184 +15,38 @@
                     <div class="col-12  py-3 order-last order-lg-first">
                         <!-- formulario -->
                         <div class="d-flex justify-content-center mt-3 mb-1">
-                            <h4>Propuestas enviadas por alumnos</h4>
+                            <h4>Listado de propuestas</h4>
                         </div>
                         <div class="card">
                             <div class="card-body">
                                 <table class="table table-striped table-hover">
                                     <thead>
                                         <tr>
-                                            <th>ESTUDIANTES
-                                                <span class="material-symbols-outlined">
-                                                    school
-                                                </span>
-                                            </th>
-                                            <th>PROFESOR GUÍA
-                                                <span class="material-symbols-outlined">
-                                                    person
-                                                </span>
-                                            </th>
-                                            <th>PROPUESTAS
-                                                <span class="material-symbols-outlined">
-                                                    menu_book
-                                                </span>
-                                            </th>
-                                            <th>EDITAR PROPUESTA
-                                                <span class="material-symbols-outlined">
-                                                    edit
-                                                </span>
-                                            </th>
+                                            <th>Id</th>
+                                            <th>Fecha</th>
+                                            <th>Documento</th>
+                                            <th>Estado</th>
+                                            <th>Estudiante</th>
+                                            <th>Editar propuesta</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($propuestas as $num=>$propuesta)
                                         <tr>
-                                            <td>ESTUDIANTE</td>
-                                            <td>PROFESOR</td>
-                                            <td>PROPUESTA</td>
-                                            <td>
-                                                <a href=" {{ route('profesores.ver') }}" class="btn btn-primary">
-                                                    <i class="material-symbols-outlined">edit</i>
-                                                </a>
+                                            <td class="align-middle">{{ $propuesta->Id }}</td>
+                                            <td class="align-middle">{{ $propuesta->Fecha }}</td>
+                                            <td class="align-middle">{{ $propuesta->Documento }}</td>
+                                            <td class="align-middle">{{ $propuesta->Estado }}</td>
+                                            <td class="align-middle">{{ $propuesta->Estudiante_rut }}</td>
+                                            <td> 
+                                                <div class="col d-flex justify-content-center">
+                                                    <a href="{{ route('profesores.edit') }}" class="btn btn-primary">
+                                                        <i class="material-symbols-outlined">edit</i>
+                                                    </a>
+                                                </div>
                                             </td>
                                         </tr>
-
-                                        <tr>
-                                            <td>ESTUDIANTE</td>
-                                            <td>PROFESOR</td>
-                                            <td>PROPUESTA</td>
-                                            <td>
-                                                <button type="submit" class="btn btn-sm btn-primary">
-                                                    <span class="material-symbols-outlined">
-                                                        visibility
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-success">
-                                                    <span class="material-symbols-outlined">
-                                                        add
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-danger">
-                                                    <span class="material-symbols-outlined">
-                                                        delete
-                                                    </span>
-                                                </button>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>ESTUDIANTE</td>
-                                            <td>PROFESOR</td>
-                                            <td>PROPUESTA</td>
-                                            <td>
-                                                <button type="submit" class="btn btn-sm btn-primary">
-                                                    <span class="material-symbols-outlined">
-                                                        visibility
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-success">
-                                                    <span class="material-symbols-outlined">
-                                                        add
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-danger">
-                                                    <span class="material-symbols-outlined">
-                                                        delete
-                                                    </span>
-                                                </button>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>ESTUDIANTE</td>
-                                            <td>PROFESOR</td>
-                                            <td>PROPUESTA</td>
-                                            <td>
-                                                <button type="submit" class="btn btn-sm btn-primary">
-                                                    <span class="material-symbols-outlined">
-                                                        visibility
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-success">
-                                                    <span class="material-symbols-outlined">
-                                                        add
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-danger">
-                                                    <span class="material-symbols-outlined">
-                                                        delete
-                                                    </span>
-                                                </button>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>ESTUDIANTE</td>
-                                            <td>PROFESOR</td>
-                                            <td>PROPUESTA</td>
-                                            <td>
-                                                <button type="submit" class="btn btn-sm btn-primary">
-                                                    <span class="material-symbols-outlined">
-                                                        visibility
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-success">
-                                                    <span class="material-symbols-outlined">
-                                                        add
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-danger">
-                                                    <span class="material-symbols-outlined">
-                                                        delete
-                                                    </span>
-                                                </button>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>ESTUDIANTE</td>
-                                            <td>PROFESOR</td>
-                                            <td>PROPUESTA</td>
-                                            <td>
-                                                <button type="submit" class="btn btn-sm btn-primary">
-                                                    <span class="material-symbols-outlined">
-                                                        visibility
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-success">
-                                                    <span class="material-symbols-outlined">
-                                                        add
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-danger">
-                                                    <span class="material-symbols-outlined">
-                                                        delete
-                                                    </span>
-                                                </button>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>ESTUDIANTE</td>
-                                            <td>PROFESOR</td>
-                                            <td>PROPUESTA</td>
-                                            <td>
-                                                <button type="submit" class="btn btn-sm btn-primary">
-                                                    <span class="material-symbols-outlined">
-                                                        visibility
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-success">
-                                                    <span class="material-symbols-outlined">
-                                                        add
-                                                    </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-danger">
-                                                    <span class="material-symbols-outlined">
-                                                        delete
-                                                    </span>
-                                                </button>
-                                            </td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -201,5 +55,6 @@
                 </div>
             </div>
         </div>
+    </div>
 </body>
 @endsection

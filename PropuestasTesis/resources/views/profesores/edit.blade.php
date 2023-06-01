@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col">
                 <div>
-                    <h1>Ver Propuesta</h1>
+                    <h3>Editar Propuesta</h3>
                 </div>
             </div>
         </div>

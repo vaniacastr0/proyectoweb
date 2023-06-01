@@ -25,11 +25,13 @@ Route::get('/estudiantes/estado', [App\Http\Controllers\EstudiantesController::c
 
 Route::get('/administradores/profesores',[App\Http\Controllers\AdministradoresController::class, 'profesores'])->name('administradores.profesores');
 Route::get('/administradores/alumnos',[App\Http\Controllers\AdministradoresController::class, 'alumnos'])->name('administradores.alumnos');
+Route::get('/administradores/alumnos/edit',[App\Http\Controllers\AdministradoresController::class, 'edit'])->name('administradores.edit');
+Route::get('/administradores/alumnos/create',[App\Http\Controllers\AdministradoresController::class, 'create'])->name('administradores.create');
 Route::get('/administradores/propuestas',[App\Http\Controllers\AdministradoresController::class, 'propuestas_revisadas'])->name('administradores.propuestas_revisadas');
 
 
 
 Route::get('/profesores',[App\Http\Controllers\ProfesoresController::class,'propuestas'])->name('profesores.propuestas');
-Route::get('/profesores/ver',[App\Http\Controllers\ProfesoresController::class,'ver'])->name('profesores.ver');
+Route::get('/profesores/edit',[App\Http\Controllers\ProfesoresController::class,'edit'])->name('profesores.edit');
 Route::get('/profesores/create',[App\Http\Controllers\ProfesoresController::class,'create'])->name('profesores.create');
 Route::get('/profesores/delete',[App\Http\Controllers\ProfesoresController::class,'delete'])->name('profesores.delete');

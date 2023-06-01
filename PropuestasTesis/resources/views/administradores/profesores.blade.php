@@ -1,5 +1,10 @@
 @extends('templates.master')
 
+@section('hojas-estilo')
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+@endsection
+
 @section('contenido-principal')
 <body style="background-color: rgb(255, 255, 255);">
     <div class="container">
@@ -19,6 +24,7 @@
                                         <th>Rut</th>
                                         <th>Nombre</th>
                                         <th>Apellido</th>
+                                        <th>Eliminar</th>
                                     </thead>
                                     <tbody>
                                         @foreach ($profesores as $num=>$profesor)
@@ -27,6 +33,13 @@
                                             <td class="align-middle">{{ $profesor->Rut }}</td>
                                             <td class="align-middle">{{ $profesor->Nombre }}</td>
                                             <td class="align-middle">{{ $profesor->Apellido }}</td>
+                                            <td> 
+                                                <div class="col d-flex justify-content-center">
+                                                    <a href="#" class="btn btn-primary">
+                                                        <i class="material-symbols-outlined">delete</i>
+                                                    </a>
+                                                </div>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -37,6 +50,14 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-1">
+                    <a href="{{ route('administradores.create') }}" class="btn btn-primary">Agregar profesor</a>
+            </div>
+        </div>
+    </div>
 </body>
 @endsection
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Estudiante;
 use App\Models\Profesor;
+use App\Models\Propuesta;
 
 class AdministradoresController extends Controller
 {
@@ -19,6 +20,15 @@ class AdministradoresController extends Controller
     }
 
     public function propuestas_revisadas(){
-        return view('administradores.propuestas_revisadas');
+        $propuestas = Propuesta::all();
+        return view('administradores.propuestas_revisadas',compact('propuestas'));
+    }
+
+    public function edit(){
+        return view('administradores.edit');
+    }
+
+    public function create(){
+        return view('administradores.create');
     }
 }

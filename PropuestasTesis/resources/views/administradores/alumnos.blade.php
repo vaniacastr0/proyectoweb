@@ -1,5 +1,10 @@
 @extends('templates.master')
 
+@section('hojas-estilo')
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+@endsection
+
 @section('contenido-principal')
 <body style="background-color: rgb(255, 255, 255);">
     <div class="container">
@@ -20,6 +25,7 @@
                                         <th>Nombre</th>
                                         <th>Apellido</th>
                                         <th>Email</th>
+                                        <th>Eliminar</th>
                                     </thead>
                                     <tbody>
                                         @foreach ($estudiantes as $num=>$estudiante)
@@ -29,6 +35,13 @@
                                             <td class="align-middle">{{ $estudiante->Nombre }}</td>
                                             <td class="align-middle">{{ $estudiante->Apellido }}</td>
                                             <td class="align-middle">{{ $estudiante->Email }}</td>
+                                            <td> 
+                                                <div class="col d-flex justify-content-center">
+                                                    <a href="#" class="btn btn-primary">
+                                                        <i class="material-symbols-outlined">delete</i>
+                                                    </a>
+                                                </div>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -39,6 +52,14 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+                    <a href="{{ route('administradores.create') }}" class="btn btn-primary">Agregar Alumno</a>
+            </div>
+        </div>
+    </div>
 </body>
 @endsection
 
