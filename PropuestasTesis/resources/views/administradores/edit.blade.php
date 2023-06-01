@@ -8,7 +8,7 @@
 
 @section('contenido-principal')
 
-<body>
+<body style="background-color: #e9e5f3;">
     <div class="container d-flex justify-content-center align-items-center mt-3 mb-3 pt-3">
         <div class="row">
             <div class="col">

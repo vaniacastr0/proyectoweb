@@ -10,12 +10,12 @@ use App\Models\Propuesta;
 class AdministradoresController extends Controller
 {
     public function profesores(){
-        $profesores = Profesor::all();
+        $profesores = Profesor::orderBy('Apellido')->get();
         return view('administradores.profesores',compact('profesores'));
     }
 
     public function alumnos(){
-        $estudiantes = Estudiante::all();
+        $estudiantes = Estudiante::orderBy('Apellido')->get();
         return view('administradores.alumnos',compact('estudiantes'));
     }
 
@@ -28,7 +28,40 @@ class AdministradoresController extends Controller
         return view('administradores.edit');
     }
 
-    public function create(){
-        return view('administradores.create');
+    public function create_estudiante(){
+        return view('administradores.create_estudiante');
+    }
+
+    public function create_profesor(){
+        return view('administradores.create_profesor');
+    }
+
+    public function store_profesor(Request $request){
+        $profesor = new Profesor();
+        $profesor->Rut = $request->input('rut');
+        $profesor->Nombre = $request->input('nombre');
+        $profesor->Apellido = $request->input('apellido');
+        $profesor->save();
+        return redirect()->route('administradores.profesores');
+    }
+
+    public function destroy_profesor(Profesor $profesor){
+        $profesor->delete();
+        return redirect()->route('administradores.profesores');
+    }
+
+    public function store_estudiante(Request $request){
+        $estudiante = new Estudiante();
+        $estudiante->Rut = $request->input('rut');
+        $estudiante->Nombre = $request->input('nombre');
+        $estudiante->Apellido = $request->input('apellido');
+        $estudiante->Email = $request->input('email');
+        $estudiante->save();
+        return redirect()->route('administradores.alumnos');
+    }
+
+    public function destroy_estudiante(Estudiante $estudiante){
+        $estudiante->delete();
+        return redirect()->route('administradores.alumnos');
     }
 }

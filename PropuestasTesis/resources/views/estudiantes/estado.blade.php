@@ -1,9 +1,9 @@
 @extends('templates.master')
 
 @section('contenido-principal')
-<body style="background-color: rgb(255, 255, 255);">
+<body style="background-color: #e9e5f3;">
     <div class="container-fluid py-5">
-        <h1 class="text-center mb-4 fw-bold">Estado de propuesta</h1>
+        <h3 class="text-center mb-4 fw-bold">Estado de propuesta</h3>
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card">

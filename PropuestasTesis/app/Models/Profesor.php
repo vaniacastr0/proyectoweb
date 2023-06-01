@@ -9,7 +9,12 @@ class Profesor extends Model
 {
     use HasFactory;
     protected $table = 'profesores';
-
+    protected $primaryKey = 'Rut';
+    protected $fillable = [ 
+        'Rut','Nombre','Apellido'
+    ];
+    public $incrementing = false;
+    
     public function propuestas():BelongsToMany{
         return $this->belongsToMany(Propuesta::class);
     }

@@ -24,9 +24,17 @@ Route::get('/estudiantes/ingreso', [App\Http\Controllers\EstudiantesController::
 Route::get('/estudiantes/estado', [App\Http\Controllers\EstudiantesController::class, 'estado'])->name('estudiantes.estado');
 
 Route::get('/administradores/profesores',[App\Http\Controllers\AdministradoresController::class, 'profesores'])->name('administradores.profesores');
+Route::post('/administradores/profesores',[App\Http\Controllers\AdministradoresController::class, 'store_profesor'])->name('administradores.store_profesor');
+Route::get('/administradores/profesores/create',[App\Http\Controllers\AdministradoresController::class, 'create_profesor'])->name('administradores.create_profesor');
+Route::delete('/administradores/profesores/{profesor}',[App\Http\Controllers\AdministradoresController::class, 'destroy_profesor'])->name('administradores.destroy_profesor');
+
+
 Route::get('/administradores/alumnos',[App\Http\Controllers\AdministradoresController::class, 'alumnos'])->name('administradores.alumnos');
 Route::get('/administradores/alumnos/edit',[App\Http\Controllers\AdministradoresController::class, 'edit'])->name('administradores.edit');
-Route::get('/administradores/alumnos/create',[App\Http\Controllers\AdministradoresController::class, 'create'])->name('administradores.create');
+Route::get('/administradores/alumnos/create',[App\Http\Controllers\AdministradoresController::class, 'create_estudiante'])->name('administradores.create_estudiante');
+Route::delete('/administradores/estudiantes/{estudiante}',[App\Http\Controllers\AdministradoresController::class, 'destroy_estudiante'])->name('administradores.destroy_estudiante');
+Route::post('/administradores/estudiantes',[App\Http\Controllers\AdministradoresController::class, 'store_estudiante'])->name('administradores.store_estudiante');
+
 Route::get('/administradores/propuestas',[App\Http\Controllers\AdministradoresController::class, 'propuestas_revisadas'])->name('administradores.propuestas_revisadas');
 
 

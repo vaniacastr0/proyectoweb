@@ -7,16 +7,19 @@
 
 @section('contenido-principal')
 
-<body style="background-color: rgb(255, 255, 255);">
+<body style="background-color: #e9e5f3;">
+    <div class="container-fluid d-flex flex-column justify-content-lg-center align-items-center">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center py-4">
+                <h3>Listado de alumnos</h3>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg">
                 <div class="row bg-white">
                     <div class="col-12  py-3 order-last order-lg-first">
-                        <!-- formulario -->
-                        <div class="d-flex justify-content-center mt-3 mb-1">
-                            <h4>Listado de propuestas</h4>
-                        </div>
                         <div class="card">
                             <div class="card-body">
                                 <table class="table table-striped table-hover">

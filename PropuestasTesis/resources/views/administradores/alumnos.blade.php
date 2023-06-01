@@ -6,16 +6,20 @@
 @endsection
 
 @section('contenido-principal')
-<body style="background-color: rgb(255, 255, 255);">
+<body style="background-color: #e9e5f3;">
+    <div class="container-fluid d-flex flex-column justify-content-lg-center align-items-center">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center py-4">
+                <h3>Listado de alumnos</h3>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg">
                 <div class="row bg-white">
                     <div class="col-12  py-3 order-last order-lg-first">
                         <!-- formulario -->
-                        <div class="d-flex justify-content-center mt-3 mb-1">
-                            <h4>Listado de Alumnos</h4>
-                        </div>
                         <div class="card">
                             <div class="card-body">
                                 <table class="table table-striped table-hover">
@@ -36,10 +40,16 @@
                                             <td class="align-middle">{{ $estudiante->Apellido }}</td>
                                             <td class="align-middle">{{ $estudiante->Email }}</td>
                                             <td> 
-                                                <div class="col d-flex justify-content-center">
-                                                    <a href="#" class="btn btn-primary">
-                                                        <i class="material-symbols-outlined">delete</i>
-                                                    </a>
+                                                <div class="row">
+                                                    <div class="col d-flex justify-content-first">
+                                                        <form method="POST" action="{{route('administradores.destroy_estudiante',$estudiante->Rut)}}">
+                                                            @method('delete')
+                                                            @csrf
+                                                            <button type="submit" class="btn btn-sm btn-primary">
+                                                                <span class="material-symbols-outlined">delete</span>
+                                                            </button>
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>
@@ -56,7 +66,7 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col">
-                    <a href="{{ route('administradores.create') }}" class="btn btn-primary">Agregar Alumno</a>
+                    <a href="{{ route('administradores.create_estudiante') }}" class="btn btn-primary">Agregar Alumno</a>
             </div>
         </div>
     </div>

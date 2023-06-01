@@ -2,7 +2,7 @@
 
 @section('contenido-principal')
 
-<body style="background-color: rgb(246, 248, 250);">
+<body style="background-color: #e9e5f3;">
     <div class="container-fluid d-flex flex-column justify-content-lg-center align-items-center">
         <div class="row">
             <div class="col-12 d-flex justify-content-center py-4">

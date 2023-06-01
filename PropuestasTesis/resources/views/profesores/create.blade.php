@@ -6,7 +6,7 @@
 @endsection
 
 @section('contenido-principal')
-<body>
+<body style="background-color: #e9e5f3;">
     <h1>ADD</h1>
 </body>
 
