@@ -2,7 +2,7 @@
 
 @section('contenido-principal')
 
-<body style="background-color: #e9e5f3;">
+<body style="background-color: rgb(246, 248, 250);">
     <div class="container-fluid d-flex flex-column justify-content-lg-center align-items-center">
         <div class="row">
             <div class="col-12 d-flex justify-content-center py-4">
@@ -36,14 +36,22 @@
                                                 <input type="text" id="username" class="form-control">
                                             </div>
                                             <div class="mb-3">
-                                                <label for="username" class="form-label">Nombre</label>
-                                                <input type="text" id="username" class="form-control">
+                                                <label for="estudiante" class="form-label">Nombre</label>
+                                                <select id="estudiante" name="estudiante" class="form-control">
+                                                    @foreach($estudiantes as $estudiante)
+                                                        <option value="{{$estudiante->Rut}}">{{$estudiante->Nombre}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-12 col-lg-6">
                                             <div class="mb-3">
-                                                <label for="username" class="form-label">Apellido</label>
-                                                <input type="text" id="username" class="form-control">
+                                                <label for="estudiante" class="form-label">Apellido</label>
+                                                <select id="estudiante" name="estudiante" class="form-control">
+                                                    @foreach($estudiantes as $estudiante)
+                                                        <option value="{{$estudiante->Rut}}">{{$estudiante->Apellido}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="username" class="form-label">Email</label>
