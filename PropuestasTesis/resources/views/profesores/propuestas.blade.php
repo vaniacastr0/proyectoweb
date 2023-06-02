@@ -31,6 +31,7 @@
                                             <th>Estado</th>
                                             <th>Estudiante</th>
                                             <th>Editar propuesta</th>
+                                            <th>Ver propuesta</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -45,6 +46,13 @@
                                                 <div class="col d-flex justify-content-center">
                                                     <a href="{{ route('profesores.edit') }}" class="btn btn-primary">
                                                         <i class="material-symbols-outlined">edit</i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td> 
+                                                <div class="col d-flex justify-content-center">
+                                                    <a href="documentos/{{ $propuesta->Documento}}" target="blank_" class="btn btn-primary">
+                                                        Ver Propuesta
                                                     </a>
                                                 </div>
                                             </td>

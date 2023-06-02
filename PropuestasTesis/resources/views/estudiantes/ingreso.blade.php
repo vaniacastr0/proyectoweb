@@ -2,7 +2,7 @@
 
 @section('contenido-principal')
 
-<body style="background-color: rgb(246, 248, 250);">
+<body style="background-color: #e9e5f3;">
     <div class="container-fluid d-flex flex-column justify-content-lg-center align-items-center">
         <div class="row">
             <div class="col-12 d-flex justify-content-center py-4">
@@ -24,66 +24,51 @@
                             <small>Proporcione sus credenciales para ingresar al sistema. Lorem ipsum dolor sit amet,
                                 consectetur adipiscing elit. Nullam vel ipsum at enim malesuada ullamcorper. Duis
                                 blandit velit nec arcu varius, eget accumsan magna tincidunt. Duis ullamcorper mi nec
-                                risus sodales Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, doloribus possimus nesciunt officiis sapiente vitae dolor dicta! Cupiditate illum ad dolore sit, esse dolorem, consequuntur assumenda doloremque accusamus in maxime!</small>
+                                risus sodales Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit,
+                                doloribus possimus nesciunt officiis sapiente vitae dolor dicta! Cupiditate illum ad
+                                dolore sit, esse dolorem, consequuntur assumenda doloremque accusamus in maxime!</small>
                         </div>
                         <div class="card">
                             <div class="card-body">
-                                <form>
+                                <form action="{{ route('estudiantes.store_propuesta') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
                                     <div class="row">
-                                        <div class="col-12 col-lg-6">
+                                        <div class="col-12 col-lg">
+                                            <h6>Seleccione su RUT para poder ingresar una propuesta</h6>
                                             <div class="mb-3">
-                                                <label for="username" class="form-label">Rut</label>
-                                                <input type="text" id="username" class="form-control">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="estudiante" class="form-label">Nombre</label>
-                                                <select id="estudiante" name="estudiante" class="form-control">
+                                                <label for="rut" class="form-label">Rut estudiante</label>
+                                                <select id="rut" name="rut" class="form-control">
                                                     @foreach($estudiantes as $estudiante)
-                                                        <option value="{{$estudiante->Rut}}">{{$estudiante->Nombre}}</option>
+                                                    <option value="{{$estudiante->Rut}}">{{$estudiante->Rut}}
+                                                    </option>
                                                     @endforeach
                                                 </select>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="estudiante" class="form-label">Apellido</label>
-                                                <select id="estudiante" name="estudiante" class="form-control">
-                                                    @foreach($estudiantes as $estudiante)
-                                                        <option value="{{$estudiante->Rut}}">{{$estudiante->Apellido}}</option>
-                                                    @endforeach
-                                                </select>
+                                            <div class="col-12 col-lg">
+                                                <div class="mb-3">
+                                                    <label for="fecha" class="form-label">fecha</label>
+                                                    <input type="date" id="fecha" name="fecha" class="form-control">
+                                                </div>
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="username" class="form-label">Email</label>
-                                                <input type="text" id="username" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="prop" class="form-label">Propuesta</label>
-                                                <textarea class="form-control" id="prop" rows="3" maxlength="100"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="username" class="form-label">fecha</label>
-                                                <input type="date" id="username" class="form-control">
+                                            <div class="col-12 col-lg">
+                                                <div class="mb-3">
+                                                    <label for="pdf" class="form-label">Adjuntar Propuesta</label>
+                                                    <input type="file" id="pdf" name="pdf" class="form-control">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3 text-end">
-                                                <a href="#" class="btn btn-primary">Enviar</a>
+                                                <button class="btn btn-success" type="submit">Enviar</button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
         </div>

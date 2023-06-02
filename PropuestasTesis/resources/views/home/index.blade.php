@@ -44,13 +44,15 @@
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                         <label class="form-check-label" for="exampleCheck1">Administrador</label>
                                     </div>
-                                    <div class="mb-3 px-0 text-end d-flex align-items-last">
-                                        <a href="home.html" target="_blank"
-                                            class="btn btn-primary d-flex flex-column justify-content-center">
-                                            <span class="material-symbols-outlined">favorite
-                                            </span>iniciar sesion
-                                        </a>
-
+                                    <div class="row">
+                                        <div class="col d-flex text-end">
+                                            <div class="mb-3 px-0 ">
+                                                <a href="home.html" target="_blank"
+                                                    class="btn btn-primary d-flex flex-column justify-content-center">
+                                                    iniciar sesion
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
                             </div>

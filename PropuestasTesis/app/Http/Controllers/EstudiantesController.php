@@ -15,7 +15,8 @@ class EstudiantesController extends Controller
     }
 
     public function estado(){
-        return view('estudiantes.estado');
+        $estudiantes = Estudiante::all();
+        return view('estudiantes.estado', compact('estudiantes'));
     }
 }
 

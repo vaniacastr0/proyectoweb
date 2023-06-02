@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EstudiantesController;
+use App\Http\Controllers\RegistroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::get('/',[HomeController::class,'index'])->name('home.index');
 
 Route::get('/estudiantes/ingreso', [App\Http\Controllers\EstudiantesController::class, 'ingreso'])->name('estudiantes.ingreso');
 Route::get('/estudiantes/estado', [App\Http\Controllers\EstudiantesController::class, 'estado'])->name('estudiantes.estado');
+Route::post('/estudiante/ingreso/propuesta',[App\Http\Controllers\RegistroController::class, 'store_propuesta'])->name('estudiantes.store_propuesta');
 
 Route::get('/administradores/profesores',[App\Http\Controllers\AdministradoresController::class, 'profesores'])->name('administradores.profesores');
 Route::post('/administradores/profesores',[App\Http\Controllers\AdministradoresController::class, 'store_profesor'])->name('administradores.store_profesor');

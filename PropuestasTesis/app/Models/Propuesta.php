@@ -9,7 +9,12 @@ class Propuesta extends Model
 {
     use HasFactory;
     protected $table = 'propuestas';
-    public $timestamps = false;
+    protected $primaryKey = 'Id';
+
+    protected $fillable = [ 
+        'Fecha','Documento','Estado','Estudiante_rut'
+    ];
+    public $incrementing = false;
 
     public function profesores():BelongsToMany{
         return $this->belongsToMany(Profesor::class);
