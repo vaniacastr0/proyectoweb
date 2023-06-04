@@ -17,6 +17,7 @@
                                 <option value="{{$estudiante->Rut}}">{{$estudiante->Rut}}
                                 </option>
                                 @endforeach
+                                
                             </select>
                         </div>
                     </div>

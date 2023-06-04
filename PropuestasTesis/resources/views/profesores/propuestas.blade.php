@@ -44,7 +44,7 @@
                                             <td class="align-middle">{{ $propuesta->Estudiante_rut }}</td>
                                             <td> 
                                                 <div class="col d-flex justify-content-center">
-                                                    <a href="{{ route('profesores.edit') }}" class="btn btn-primary">
+                                                    <a href="{{ route('profesores.edit', $propuesta->Id) }}" class="btn btn-primary">
                                                         <i class="material-symbols-outlined">edit</i>
                                                     </a>
                                                 </div>

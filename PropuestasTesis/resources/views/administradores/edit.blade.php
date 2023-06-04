@@ -26,16 +26,15 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-12 col-lg-6">
-                                    <h5 class="card-title">Nombre propuesta</h5>
+                                    <h5 class="card-title">Id propuesta</h5>
                                     <p class="card-text">
-                                        <li>Estudiante 1</li>
-                                        <li>Estudiante 2</li>
+                                        <li>{{$propuesta->Id}}</li>
                                     </p>
                                 </div>
                                 <div class="col-12 col-lg-6">
-                                    <h5 class="card-title">Estado</h5>
+                                    <h5 class="card-title">Estado propuesta</h5>
                                     <p class="card-text">
-                                        <li>Estado-propuesta</li>
+                                        <li>{{$propuesta->Estado}}</li>
                                     </p>
                                 </div>
                             </div>

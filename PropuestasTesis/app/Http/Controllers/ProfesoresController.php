@@ -13,8 +13,9 @@ class ProfesoresController extends Controller
         return view('profesores.propuestas',compact('propuestas'));
     }
 
-    public function edit(){
-        return view('profesores.edit');
+    public function edit($id){
+        $propuesta = Propuesta::find($id);
+        return view('profesores.edit',compact('propuesta'));
     }
 
     public function create(){

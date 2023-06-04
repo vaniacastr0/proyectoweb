@@ -6,12 +6,11 @@
 @endsection
 
 @section('contenido-principal')
-
 <body style="background-color: #e9e5f3;">
     <div class="container-fluid d-flex flex-column justify-content-lg-center align-items-center">
         <div class="row">
             <div class="col-12 d-flex justify-content-center py-4">
-                <h3>Listado de propuestas revisadas</h3>
+                <h3>Listado de alumnos</h3>
             </div>
         </div>
     </div>
@@ -25,24 +24,20 @@
                                 <table class="table table-striped table-hover">
                                     <thead>
                                         <tr>
-                                            <th>Id</th>
-                                            <th>Fecha</th>
-                                            <th>Estado</th>
-                                            <th>Estudiante</th>
-                                            <th>Editar propuesta</th>
+                                            <th>Rut estudiante</th>
+                                            <th>Documento</th>
+                                            <th>Ver Estado</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($propuestas as $num=>$propuesta)
+                                        @foreach ($propuestas as $propuesta)
                                         <tr>
-                                            <td class="align-middle">{{ $propuesta->Id }}</td>
-                                            <td class="align-middle">{{ $propuesta->Fecha }}</td>
-                                            <td class="align-middle">{{ $propuesta->Estado }}</td>
-                                            <td class="align-middle">{{ $propuesta->Estudiante_rut }}</td>
+                                            <td>{{ $propuesta->Estudiante_rut }}</td>
+                                            <td>{{ $propuesta->Documento }}</td>
                                             <td> 
                                                 <div class="col d-flex justify-content-center">
-                                                    <a href="{{ route('administradores.edit', $propuesta->Id) }}" class="btn btn-primary">
-                                                        <i class="material-symbols-outlined">edit</i>
+                                                    <a href="{{ route('estudiantes.ver_estado', $propuesta->Id) }}"  class="btn btn-primary">
+                                                        Ver Estado
                                                     </a>
                                                 </div>
                                             </td>

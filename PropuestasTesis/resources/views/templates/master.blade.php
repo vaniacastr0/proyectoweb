@@ -40,7 +40,7 @@
                         </li>
                         <li>
                             <a class="nav-link @if(Route::current()->getName()=='estudiantes.estado') active @endif"
-                                href="{{ route('estudiantes.estado')}}">Estado de propuesta</a>
+                                href="{{ route('estudiantes.lista_estado')}}">Estado de propuesta</a>
                         </li>
                     </ul>
                     </li>

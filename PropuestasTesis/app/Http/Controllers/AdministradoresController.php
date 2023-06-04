@@ -24,8 +24,9 @@ class AdministradoresController extends Controller
         return view('administradores.propuestas_revisadas',compact('propuestas'));
     }
 
-    public function edit(){
-        return view('administradores.edit');
+    public function edit($id){
+        $propuesta = Propuesta::find($id);
+        return view('administradores.edit',compact('propuesta'));
     }
 
     public function create_estudiante(){
