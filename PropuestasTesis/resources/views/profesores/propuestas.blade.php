@@ -1,3 +1,7 @@
+@php
+$Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=>'Aceptado'];
+@endphp
+
 @extends('templates.master')
 
 @section('hojas-estilo')
@@ -11,7 +15,7 @@
     <div class="container-fluid d-flex flex-column justify-content-lg-center align-items-center">
         <div class="row">
             <div class="col-12 d-flex justify-content-center py-4">
-                <h3>Listado de alumnos</h3>
+                <h3>Listado de propuestas</h3>
             </div>
         </div>
     </div>
@@ -30,8 +34,8 @@
                                             <th>Documento</th>
                                             <th>Estado</th>
                                             <th>Estudiante</th>
-                                            <th>Editar propuesta</th>
-                                            <th>Ver propuesta</th>
+                                            <th>Editar</th>
+                                            <th>Ver</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -40,19 +44,21 @@
                                             <td class="align-middle">{{ $propuesta->Id }}</td>
                                             <td class="align-middle">{{ $propuesta->Fecha }}</td>
                                             <td class="align-middle">{{ $propuesta->Documento }}</td>
-                                            <td class="align-middle">{{ $propuesta->Estado }}</td>
+                                            <td class="align-middle">{{ $Estados[$propuesta->Estado] }}</td>
                                             <td class="align-middle">{{ $propuesta->Estudiante_rut }}</td>
-                                            <td> 
+                                            <td>
                                                 <div class="col d-flex justify-content-center">
-                                                    <a href="{{ route('profesores.edit', $propuesta->Id) }}" class="btn btn-primary">
+                                                    <a href="{{ route('profesores.edit', $propuesta->Id) }}"
+                                                        class="btn btn-light">
                                                         <i class="material-symbols-outlined">edit</i>
                                                     </a>
                                                 </div>
                                             </td>
-                                            <td> 
+                                            <td>
                                                 <div class="col d-flex justify-content-center">
-                                                    <a href="documentos/{{ $propuesta->Documento}}" target="blank_" class="btn btn-primary">
-                                                        Ver Propuesta
+                                                    <a href="documentos/{{ $propuesta->Documento}}" target="blank_"
+                                                        class="btn btn-light">
+                                                        <i class="material-symbols-outlined">visibility</i>
                                                     </a>
                                                 </div>
                                             </td>

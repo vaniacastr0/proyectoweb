@@ -27,7 +27,7 @@ class RegistroController extends Controller
         } catch (Exception $e){
             DB::rollback();
         }
-        
-        return redirect()->route('estudiantes.estado'); //CON LA RUTA PARA DEVOLVERSE NO ME SIRVE TT
+
+        return redirect()->route('estudiantes.lista_estado'); //CON LA RUTA PARA DEVOLVERSE NO ME SIRVE TT
     }
 }

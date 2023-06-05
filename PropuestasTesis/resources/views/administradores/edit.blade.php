@@ -1,3 +1,7 @@
+@php
+$Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=>'Aceptado'];
+@endphp
+
 @extends('templates.master')
 
 
@@ -34,7 +38,7 @@
                                 <div class="col-12 col-lg-6">
                                     <h5 class="card-title">Estado propuesta</h5>
                                     <p class="card-text">
-                                        <li>{{$propuesta->Estado}}</li>
+                                        <li>{{ $Estados[$propuesta->Estado] }}</li>
                                     </p>
                                 </div>
                             </div>

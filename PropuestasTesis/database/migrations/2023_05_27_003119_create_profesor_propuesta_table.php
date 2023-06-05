@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('Profesor_Propuesta', function (Blueprint $table) {
             //crear la clave compuesta
             $table->integer('Propuesta_Id');
-            $table->string('Profesor_Rut',10);
-            $table->primary(['Propuesta_Id','Profesor_Rut']);
+            $table->integer('Profesor_Id');
+            $table->primary(['Propuesta_Id','Profesor_Id']);
 
             //crear los demás campos de la tabla de intersección
             $table->date('Fecha');
@@ -26,7 +26,7 @@ return new class extends Migration
 
             //referenciar a propuestas y profesores
             $table->foreign('Propuesta_Id')->references('Id')->on('Propuestas');
-            $table->foreign('Profesor_Rut')->references('Rut')->on('Profesores');
+            $table->foreign('Profesor_Id')->references('Id')->on('Profesores');
         });
     }
 

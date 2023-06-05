@@ -45,7 +45,7 @@
                                                         <form method="POST" action="{{route('administradores.destroy_estudiante',$estudiante->Rut)}}">
                                                             @method('delete')
                                                             @csrf
-                                                            <button type="submit" class="btn btn-sm btn-primary">
+                                                            <button type="submit" class="btn btn-sm btn-danger text-white">
                                                                 <span class="material-symbols-outlined">delete</span>
                                                             </button>
                                                         </form>
@@ -66,7 +66,7 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col">
-                    <a href="{{ route('administradores.create_estudiante') }}" class="btn btn-primary">Agregar Alumno</a>
+                    <a href="{{ route('administradores.create_estudiante') }}" class="btn btn-light">Agregar Alumno</a>
             </div>
         </div>
     </div>

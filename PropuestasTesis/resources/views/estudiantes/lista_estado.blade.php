@@ -10,7 +10,7 @@
     <div class="container-fluid d-flex flex-column justify-content-lg-center align-items-center">
         <div class="row">
             <div class="col-12 d-flex justify-content-center py-4">
-                <h3>Listado de alumnos</h3>
+                <h3>Listado de propuestas inscritas</h3>
             </div>
         </div>
     </div>
@@ -36,8 +36,8 @@
                                             <td>{{ $propuesta->Documento }}</td>
                                             <td> 
                                                 <div class="col d-flex justify-content-center">
-                                                    <a href="{{ route('estudiantes.ver_estado', $propuesta->Id) }}"  class="btn btn-primary">
-                                                        Ver Estado
+                                                    <a href="{{ route('estudiantes.ver_estado', $propuesta->Id) }}"  class="btn btn-light">
+                                                        <i class="material-symbols-outlined">visibility</i>
                                                     </a>
                                                 </div>
                                             </td>

@@ -15,10 +15,9 @@ class ProfesoresPropuestasSeeder extends Seeder
     {
         $horaActual = Carbon::now()->format('H:i:s');
         DB::table('profesor_propuesta')->insert([
-            ['Propuesta_Id'=>'1','Profesor_Rut' => '7834358-3','Fecha'=>Carbon::now(),'Hora'=>$horaActual,'Comentario'=>'asdasdsadsdasddsdsa'],
-            ['Propuesta_Id'=>'2','Profesor_Rut' => '63704068-5','Fecha'=>Carbon::now(),'Hora'=>$horaActual,'Comentario'=>'Hace algo nuevo tu propuesta no va a lugar'],
-            ['Propuesta_Id'=>'3','Profesor_Rut' => '6213232-9','Fecha'=>Carbon::now(),'Hora'=>$horaActual,'Comentario'=>'mal redactado hacelo tod de nuevo'],
-
+            ['Propuesta_Id'=>'1','Profesor_Id' => '1','Fecha'=>Carbon::now(),'Hora'=>$horaActual,'Comentario'=>'asdasdsadsdasddsdsa'],
+            ['Propuesta_Id'=>'2','Profesor_Id' => '2','Fecha'=>Carbon::now(),'Hora'=>$horaActual,'Comentario'=>'Hace algo nuevo tu propuesta no va a lugar'],
+            ['Propuesta_Id'=>'3','Profesor_Id' => '3','Fecha'=>Carbon::now(),'Hora'=>$horaActual,'Comentario'=>'mal redactado hacelo tod de nuevo'],
         ]);    
     }
 }

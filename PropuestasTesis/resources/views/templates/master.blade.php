@@ -10,7 +10,7 @@
     <title>Home</title>
 </head>
 
-<body>
+<body style="background: linear-gradient(to bottom, #ebd1db 43%, #e67d8d 100%);">
     <!-- navbar -->
     <div class="container-fluid px-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
@@ -88,7 +88,7 @@
     </div>
 
     <!-- contenido principal -->
-    <div class="container-fluid">
+    <div class="container-fluid min-vh-100">
         @yield('contenido-principal')
     </div>
 

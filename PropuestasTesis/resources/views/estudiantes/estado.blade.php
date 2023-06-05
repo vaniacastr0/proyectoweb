@@ -39,7 +39,7 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <h5 class="card-title">Propuesta</h5>
-                        <p class="card-text">Estado</p>
+                        <p class="card-text">{{ $Estados[$propuesta->Estado] }}</p>
                     </div>
                 </div>
             </div>

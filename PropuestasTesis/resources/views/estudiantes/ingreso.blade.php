@@ -61,7 +61,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3 text-end">
-                                                <button class="btn btn-success" type="submit">Enviar</button>
+                                                <button class="btn btn-light" type="submit">Enviar</button>
                                             </div>
                                         </div>
                                     </div>

@@ -1,3 +1,7 @@
+@php
+$Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=>'Aceptado'];
+@endphp
+
 @extends('templates.master')
 
 @section('contenido-principal')
@@ -32,7 +36,7 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <h5 class="card-title">Estado</h5>
-                        <p class="card-text">{{$propuesta->Estado}}</p>
+                        <p class="card-text">{{ $Estados[$propuesta->Estado]  }}</p>
                     </div>
                 </div>
             </div>

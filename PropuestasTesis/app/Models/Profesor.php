@@ -9,9 +9,9 @@ class Profesor extends Model
 {
     use HasFactory;
     protected $table = 'profesores';
-    protected $primaryKey = 'Rut';
+    protected $primaryKey = 'Id';
     protected $fillable = [ 
-        'Rut','Nombre','Apellido'
+        'Email','Nombre','Apellido'
     ];
     public $incrementing = false;
     

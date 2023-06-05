@@ -21,6 +21,7 @@ use App\Http\Controllers\PropuestaController;
 // return view('welcome');
 //});
 
+Route::post('/login',[HomeController::class,'login'])->name('home.login');
 Route::get('/',[HomeController::class,'index'])->name('home.index');
 
 Route::get('/estudiantes/ingreso', [App\Http\Controllers\EstudiantesController::class, 'ingreso'])->name('estudiantes.ingreso');
@@ -33,14 +34,13 @@ Route::post('/administradores/profesores',[App\Http\Controllers\AdministradoresC
 Route::get('/administradores/profesores/create',[App\Http\Controllers\AdministradoresController::class, 'create_profesor'])->name('administradores.create_profesor');
 Route::delete('/administradores/profesores/{profesor}',[App\Http\Controllers\AdministradoresController::class, 'destroy_profesor'])->name('administradores.destroy_profesor');
 
-
 Route::get('/administradores/alumnos',[App\Http\Controllers\AdministradoresController::class, 'alumnos'])->name('administradores.alumnos');
 Route::get('/administradores/alumnos/edit/{propuesta}',[App\Http\Controllers\AdministradoresController::class, 'edit'])->name('administradores.edit');
 Route::get('/administradores/alumnos/create',[App\Http\Controllers\AdministradoresController::class, 'create_estudiante'])->name('administradores.create_estudiante');
 Route::delete('/administradores/estudiantes/{estudiante}',[App\Http\Controllers\AdministradoresController::class, 'destroy_estudiante'])->name('administradores.destroy_estudiante');
 Route::post('/administradores/estudiantes',[App\Http\Controllers\AdministradoresController::class, 'store_estudiante'])->name('administradores.store_estudiante');
 
-Route::get('/administradores/propuestas',[App\Http\Controllers\AdministradoresController::class, 'propuestas_revisadas'])->name('administradores.propuestas_revisadas');
+Route::get('/administradores',[App\Http\Controllers\AdministradoresController::class, 'propuestas_revisadas'])->name('administradores.propuestas_revisadas');
 
 
 
