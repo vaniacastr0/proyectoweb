@@ -29,6 +29,13 @@ class AdministradoresController extends Controller
         return view('administradores.edit',compact('propuesta'));
     }
 
+    public function update(Request $request,$Id){
+        $propuesta = Propuesta::find($Id);
+        $propuesta->Estado = $request->input('radio');
+        $propuesta->save();
+        return redirect()->route('administradores.propuestas_revisadas');
+    }
+
     public function create_estudiante(){
         return view('administradores.create_estudiante');
     }

@@ -39,6 +39,7 @@ Route::get('/administradores/alumnos/edit/{propuesta}',[App\Http\Controllers\Adm
 Route::get('/administradores/alumnos/create',[App\Http\Controllers\AdministradoresController::class, 'create_estudiante'])->name('administradores.create_estudiante');
 Route::delete('/administradores/estudiantes/{estudiante}',[App\Http\Controllers\AdministradoresController::class, 'destroy_estudiante'])->name('administradores.destroy_estudiante');
 Route::post('/administradores/estudiantes',[App\Http\Controllers\AdministradoresController::class, 'store_estudiante'])->name('administradores.store_estudiante');
+Route::post('/administradores/estudiantes/update/{propuesta}',[App\Http\Controllers\AdministradoresController::class, 'update'])->name('administradores.update');
 
 Route::get('/administradores',[App\Http\Controllers\AdministradoresController::class, 'propuestas_revisadas'])->name('administradores.propuestas_revisadas');
 
