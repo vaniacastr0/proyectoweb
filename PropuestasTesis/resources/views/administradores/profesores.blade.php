@@ -23,8 +23,7 @@
                             <div class="card-body">
                                 <table class="table table-striped table-hover">
                                     <thead>
-                                        <th>Id</th>
-                                        <th>Email</th>
+                                        <th>Rut</th>
                                         <th>Nombre</th>
                                         <th>Apellido</th>
                                         <th>Eliminar</th>
@@ -32,14 +31,13 @@
                                     <tbody>
                                         @foreach ($profesores as $num=>$profesor)
                                         <tr>
-                                            <td class="align-middle">{{ $profesor->Id }}</td>
-                                            <td class="align-middle">{{ $profesor->Email }}</td>
+                                            <td class="align-middle">{{ $profesor->Rut }}</td>
                                             <td class="align-middle">{{ $profesor->Nombre }}</td>
                                             <td class="align-middle">{{ $profesor->Apellido }}</td>
                                             <td> 
                                                 <div class="row">
                                                     <div class="col d-flex justify-content-first ">
-                                                        <form method="POST" action="{{route('administradores.destroy_profesor',$profesor->Id)}}">
+                                                        <form method="POST" action="{{ route('administradores.destroy_profesor', ['profesor' => $profesor->Rut]) }}">
                                                             @method('delete')
                                                             @csrf
                                                             <button type="submit" class="btn btn-sm btn-danger text-white">

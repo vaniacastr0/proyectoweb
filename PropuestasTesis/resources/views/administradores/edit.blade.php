@@ -104,6 +104,7 @@ $Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=
                             <a href="{{ route('profesores.propuestas') }}" class="btn btn-light">Volver</a>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
