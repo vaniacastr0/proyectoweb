@@ -31,7 +31,7 @@ $Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=
                                         <tr>
                                             <th>Id</th>
                                             <th>Fecha</th>
-                                            <th>Documento</th>
+                                            <th class="d-none d-sm-table-cell">Documento</th>
                                             <th>Estado</th>
                                             <th>Estudiante</th>
                                             <th>Editar</th>
@@ -43,12 +43,13 @@ $Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=
                                         <tr>
                                             <td class="align-middle">{{ $propuesta->Id }}</td>
                                             <td class="align-middle">{{ $propuesta->Fecha }}</td>
-                                            <td class="align-middle">{{ $propuesta->Documento }}</td>
+                                            <td class="align-middle d-none d-sm-table-cell">{{ $propuesta->Documento }}
+                                            </td>
                                             <td class="align-middle">{{ $Estados[$propuesta->Estado] }}</td>
                                             <td class="align-middle">{{ $propuesta->Estudiante_rut }}</td>
                                             <td>
                                                 <div class="col d-flex justify-content-center">
-                                                    <a href="{{ route('profesores.edit', $propuesta->Id) }}"
+                                                    <a href="{{ route('profesores.identificador', $propuesta->Id) }}"
                                                         class="btn btn-light">
                                                         <i class="material-symbols-outlined">edit</i>
                                                     </a>
@@ -56,7 +57,7 @@ $Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=
                                             </td>
                                             <td>
                                                 <div class="col d-flex justify-content-center">
-                                                    <a href="documentos/{{ $propuesta->Documento}}" target="blank_"
+                                                    <a href="documentos/{{ $propuesta->Documento}}" target="_blank"
                                                         class="btn btn-light">
                                                         <i class="material-symbols-outlined">visibility</i>
                                                     </a>

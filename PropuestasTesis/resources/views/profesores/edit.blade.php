@@ -29,13 +29,13 @@ $Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=
                     <div class="card">
                         <div class="card-header">
                             <div class="row">
-                                <div class="col-12 col-lg-6">
+                                <div class="col-12 col-lg-6 text-center mt-3">
                                     <h5 class="card-title">Id propuesta</h5>
                                     <p class="card-text">
                                         <li>{{$propuesta->Id}}</li>
                                     </p>
                                 </div>
-                                <div class="col-12 col-lg-6">
+                                <div class="col-12 col-lg-6 text-center mt-3">
                                     <h5 class="card-title">Estado</h5>
                                     <p class="card-text">
                                         <li>{{ $Estados[$propuesta->Estado] }}</li>
@@ -44,21 +44,52 @@ $Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col mb-2">
-                                    Agregar comentarios
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="mb-3">
-                                        <textarea id="mensaje" class="form-control"></textarea>
+                            @if(count($propuesta->profesoresConPivot->where('pivot.Profesor_Id',$profesor->Id))>0)
+                                <div class="row">
+                                    <div class="col-12 mb-2 text-center">
+                                        <h5>Borrar comentarios</h5>
                                     </div>
                                 </div>
-                                <div class="col text-end">
-                                    <a href="#" class="btn btn-primary">Enviar comentarios</a>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="comentario" name="comentario"
+                                            placeholder="{{$propuesta->profesoresConPivot->where('pivot.Profesor_Id',$profesor->Id)->first()->pivot->Comentario}}"
+                                            disabled>
+                                    </div>
                                 </div>
-                            </div>
+                                <form method="POST" action="{{route('profesores.destroy_comentario',[$propuesta->Id,$profesor->Id] )}}">
+                                    @method('delete')
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col text-end mt-3">
+                                            <button class="btn btn-light" type="submit">Borrar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            @else
+                                <form action="{{ route('profesores.store_comentario',[$propuesta->Id,$profesor->Id]) }}" method="POST">
+                                    @method('POST')
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col-12 mb-2 text-center">
+                                            <h5>Agregar comentarios</h5>
+                                        </div>
+                                    </div>
+                                    <!-- aqui iba el select de correos de profes -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="mensaje" name="mensaje">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col text-end mt-3">
+                                            <button class="btn btn-light" type="submit">Comentar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -69,7 +100,7 @@ $Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=
         <div class="row">
             <div class="col-1">
                 <div class="col text-end">
-                    <a href="{{ route('profesores.propuestas') }}" class="btn btn-primary">Volver</a>
+                    <a href="{{ route('profesores.propuestas') }}" class="btn btn-light">Volver</a>
                 </div>
             </div>
         </div>

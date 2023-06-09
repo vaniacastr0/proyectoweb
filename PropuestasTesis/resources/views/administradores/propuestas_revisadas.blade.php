@@ -31,7 +31,7 @@ $Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=
                                         <tr>
                                             <th>Id</th>
                                             <th>Fecha</th>
-                                            <th>Documento</th>
+                                            <th class="d-none d-lg-table-cell">Documento</th>
                                             <th>Estado</th>
                                             <th>Estudiante</th>
                                             <th>Editar</th>
@@ -43,7 +43,8 @@ $Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=
                                         <tr>
                                             <td class="align-middle">{{ $propuesta->Id }}</td>
                                             <td class="align-middle">{{ $propuesta->Fecha }}</td>
-                                            <td class="align-middle">{{ $propuesta->Documento }}</td>
+                                            <td class="align-middle d-none d-lg-table-cell">{{$propuesta->Documento}}
+                                            </td>
                                             <td class="align-middle">{{ $Estados[$propuesta->Estado] }}</td>
                                             <td class="align-middle">{{ $propuesta->Estudiante_rut }}</td>
                                             <td>

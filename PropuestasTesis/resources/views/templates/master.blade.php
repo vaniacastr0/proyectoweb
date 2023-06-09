@@ -10,12 +10,12 @@
     <title>Home</title>
 </head>
 
-<body style="background: linear-gradient(to bottom, #ebd1db 43%, #e67d8d 100%);">
+<body style="background: linear-gradient(to bottom, #ebd1db 43%, #f3b2bc 100%);">
     <!-- navbar -->
     <div class="container-fluid px-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Propuestas Tesis</a>
+                <a class="navbar-brand" href="#">Propuestas TSI</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -32,57 +32,66 @@
                                 aria-expanded="false">
                                 Estudiante
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-dark bg-secondary">
+                            <ul class="dropdown-menu  dropdown-menu-dark bg-secondary">
                                 <li>
                                     <a class="nav-link @if(Route::current()->getName()=='estudiantes.ingreso') active @endif"
                                         href="{{ route('estudiantes.ingreso')}}">Ingreso de propuestas</a>
                                 </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="nav-link @if(Route::current()->getName()=='estudiantes.estado') active @endif"
+                                        href="{{ route('estudiantes.lista_estado')}}">Estado de propuesta</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <a class="nav-link @if(Route::current()->getName()=='estudiantes.estado') active @endif"
-                                href="{{ route('estudiantes.lista_estado')}}">Estado de propuesta</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Administrador
+                            </a>
+                            <ul class="dropdown-menu  dropdown-menu-dark bg-secondary">
+                                <li>
+                                    <a class="nav-link @if(Route::current()->getName()=='administradores.profesores') active @endif"
+                                        href="{{ route('administradores.profesores')}}">Listado de
+                                        Profesores</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="nav-link @if(Route::current()->getName()=='administradores.alumnos') active @endif"
+                                        href="{{ route('administradores.alumnos')}}">Listado de Alumnos</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="nav-link @if(Route::current()->getName()=='administradores.propuestas_revisadas') active @endif"
+                                        href="{{ route('administradores.propuestas_revisadas')}}">Propuestas
+                                        Revisadas</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Profesor
+                            </a>
+                            <ul class="dropdown-menu  dropdown-menu-dark bg-secondary">
+                                <li>
+                                    <a class="nav-link @if(Route::current()->getName()=='profesores.propuestas') active @endif"
+                                        href="{{ route('profesores.propuestas')}}">Propuestas</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Administrador
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark bg-secondary">
-                            <li>
-                                <a class="nav-link @if(Route::current()->getName()=='administradores.profesores') active @endif"
-                                    href="{{ route('administradores.profesores')}}">Listado de Profesores</a>
-                            </li>
-                            <li>
-                                <a class="nav-link @if(Route::current()->getName()=='administradores.alumnos') active @endif"
-                                    href="{{ route('administradores.alumnos')}}">Listado de Alumnos</a>
-                            </li>
-                            <li>
-                                <a class="nav-link @if(Route::current()->getName()=='administradores.propuestas_revisadas') active @endif"
-                                    href="{{ route('administradores.propuestas_revisadas')}}">Propuestas Revisadas</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Profesor
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark bg-secondary">
-                            <li>
-                                <a class="nav-link @if(Route::current()->getName()=='profesores.propuestas') active @endif"
-                                    href="{{ route('profesores.propuestas')}}">Propuestas</a>
-                            </li>
-                            <li class="nav-item d-lg-none">
-                                <a class="nav-link" href="">Cerrar Sesión</a>
-                            </li>
-                        </ul>
-                    </li>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
                 </div>
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
-                </form>
             </div>
         </nav>
     </div>

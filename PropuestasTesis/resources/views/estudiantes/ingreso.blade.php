@@ -20,13 +20,12 @@
                         <div class="d-flex justify-content-center mt-3 mb-1">
                             <h4>Crea tu propuesta</h4>
                         </div>
-                        <div class="d-flex justify-content-center align-items-center mb-3 ">
-                            <small>Proporcione sus credenciales para ingresar al sistema. Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit. Nullam vel ipsum at enim malesuada ullamcorper. Duis
-                                blandit velit nec arcu varius, eget accumsan magna tincidunt. Duis ullamcorper mi nec
-                                risus sodales Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit,
-                                doloribus possimus nesciunt officiis sapiente vitae dolor dicta! Cupiditate illum ad
-                                dolore sit, esse dolorem, consequuntur assumenda doloremque accusamus in maxime!</small>
+                        <div class="d-flex justify-content-center align-items-center mb-3 text-center">
+                            <small>Proporcione sus credenciales para ingresar al Sistema. Una vez ingresada su propuesta,
+                                esta entrará en estado de "Esperando Revisión", para posteriormente ser revisada por los profesores y 
+                                entregarle una retroalimentación.
+
+                            </small>
                         </div>
                         <div class="card">
                             <div class="card-body">

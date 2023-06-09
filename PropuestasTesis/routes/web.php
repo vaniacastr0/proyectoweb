@@ -43,9 +43,10 @@ Route::post('/administradores/estudiantes/update/{propuesta}',[App\Http\Controll
 
 Route::get('/administradores',[App\Http\Controllers\AdministradoresController::class, 'propuestas_revisadas'])->name('administradores.propuestas_revisadas');
 
-
-
 Route::get('/profesores',[App\Http\Controllers\ProfesoresController::class,'propuestas'])->name('profesores.propuestas');
-Route::get('/profesores/edit/{propuesta}',[App\Http\Controllers\ProfesoresController::class,'edit'])->name('profesores.edit');
-Route::get('/profesores/create',[App\Http\Controllers\ProfesoresController::class,'create'])->name('profesores.create');
+Route::get('/profesores/{propuesta}',[App\Http\Controllers\ProfesoresController::class,'identificador'])->name('profesores.identificador');
+Route::get('/profesores/{propuesta}/edit/{profesor}',[App\Http\Controllers\ProfesoresController::class,'edit'])->name('profesores.edit');
+Route::post('/profesores/{propuesta}/edit',[App\Http\Controllers\ProfesoresController::class,'interseccion'])->name('profesores.interseccion');
+Route::post('/profesores/comentar/{propuesta}/{profesor}',[App\Http\Controllers\ProfesoresController::class,'store_comentario'])->name('profesores.store_comentario');
 Route::get('/profesores/delete',[App\Http\Controllers\ProfesoresController::class,'delete'])->name('profesores.delete');
+Route::delete('/profesores/{propuesta}/{profesor}',[App\Http\Controllers\ProfesoresController::class, 'destroy_comentario'])->name('profesores.destroy_comentario');

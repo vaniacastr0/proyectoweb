@@ -55,7 +55,7 @@ $Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=
                                     <div class="col-12 col-lg">
                                         <div class="check-group">
                                             <div class="row">
-                                                <div class="col offset-1">
+                                                <div class="col offset-lg-1">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="radio" id="1"
                                                             value="1" @if($propuesta->Estado=='1') checked @endif>
@@ -101,7 +101,7 @@ $Estados = [1 =>'Esperando Revisión',2=>'Modificar Propuesta',3=>'Rechazado',4=
                 <div class="row">
                     <div class="col-6">
                         <div class="col mt-3">
-                            <a href="{{ route('profesores.propuestas') }}" class="btn btn-light">Volver</a>
+                            <a href="{{ route('administradores.propuestas_revisadas') }}" class="btn btn-light">Volver</a>
                         </div>
                     </div>
                 </div>

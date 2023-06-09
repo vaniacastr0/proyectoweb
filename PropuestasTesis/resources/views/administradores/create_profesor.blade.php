@@ -47,6 +47,15 @@
                         </form>
                     </div>
                 </div>
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-1">
+                            <div class="col text-end">
+                                <a href="{{ route('administradores.profesores') }}" class="btn btn-light">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
