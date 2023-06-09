@@ -29,7 +29,7 @@
                                     @method('POST')
                                     @csrf
                                     <div class="mb-3">
-                                        <label for="username" class="form-label">Nombre de Usuario</label>
+                                        <label for="username" class="form-label">Email</label>
                                         <input type="text" id="username" class="form-control">
                                     </div>
                                     <div class="mb-3">
@@ -52,9 +52,9 @@
                                         <div class="col d-flex text-end">
                                             <div class="mb-3 px-0 ">
                                                 <button
-                                                    class="btn btn-primary d-flex flex-column justify-content-center"
+                                                    class="btn btn-light d-flex flex-column justify-content-center"
                                                     type="submit">
-                                                    iniciar sesion
+                                                    Iniciar Sesión
                                                 </button>
                                             </div>
                                         </div>

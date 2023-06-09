@@ -45,7 +45,7 @@
                                             </div>
                                             <div class="col-12 col-lg">
                                                 <div class="mb-3">
-                                                    <label for="fecha" class="form-label">fecha</label>
+                                                    <label for="fecha" class="form-label">Fecha</label>
                                                     <input type="date" id="fecha" name="fecha" class="form-control">
                                                 </div>
                                             </div>
