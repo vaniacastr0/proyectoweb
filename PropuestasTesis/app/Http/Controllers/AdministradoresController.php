@@ -46,7 +46,7 @@ class AdministradoresController extends Controller
 
     public function store_profesor(Request $request){
         $profesor = new Profesor();
-        $profesor->Rut = $request->input('rut');
+        $profesor->Email = $request->input('email');
         $profesor->Nombre = $request->input('nombre');
         $profesor->Apellido = $request->input('apellido');
         $profesor->save();

@@ -25,10 +25,10 @@
                     <div class="card-body">
                         <form method="POST" action="{{ route('administradores.store_profesor') }}">
                             @csrf
-                            {{-- rut --}}
+                            {{-- email --}}
                             <div class="mb-3">
-                                <label for="rut" class="form-label">Rut</label>
-                                <input type="text" id="rut" name="rut" class="form-control">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" id="rut" name="email" class="form-control">
                             </div>
                             {{-- nombre --}}
                             <div class="mb-3">
